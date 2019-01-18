@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>opleiding</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <canvas id="ctx"></canvas>
+    <div id="particles-js"></div>
+    <div class="sidebar">
+        <div class="centerer">
+            <div class="nav">
+                <a href="javascript:navclick('nav1');" onclick="navclick('nav1')">
+                    <div id="nav1" class="nav1">home</div>
+                </a>
+                <a href="javascript:navclick('nav2');" onclick="navclick('nav2')">
+                    <div id="nav2" class="nav2">nav2</div>
+                </a>
+                <a href="javascript:navclick('nav3');" onclick="navclick('nav3')">
+                    <div id="nav3" class="nav3">nav3</div>
+                </a>
+                <a href="javascript:navclick('nav4');" onclick="navclick('nav4')">
+                    <div id="nav4" class="nav4">nav4</div>
+                </a>
+                <a href="javascript:navclick('nav5');" onclick="navclick('nav5')">
+                    <div id="nav5" class="nav5">nav5</div>
+                </a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="main">
+        <div class="landing">
+            <h1 id="nav1title" class="text">de opleiding die ik ga doen</h1>
+            <p class="text">Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos
+                debitis graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei,
+                delenit voluptatum pro ei. Elaboraret omittantur no usu, quo doctus invidunt deserunt et, no ius debet
+                labitur delicata. At sit agam corpora moderatius, summo atomorum ne nec.</p>
+        </div>
+        <div class="scroll">
+            <a href="javascript:mainscroll()">
+                <i class="fas fa-chevron-down scrollcolor "></i>
+            </a>
+
+        </div>
+        <div class="alltext">
+            <h1 id="nav2title" class="text">nav2</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos debitis
+                graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei, delenit
+                voluptatum pro ei. Elaboraret omittantur no usu, quo doctus invidunt deserunt et, no ius debet labitur
+                delicata. At sit agam corpora moderatius, summo atomorum ne nec.
+                Sea an duis eruditi alienum. Eos debet conclusionemque ut, pro labitur blandit dissentias ei. Vel duis
+                quaestio gloriatur ut, vim ut nihil verterem moderatius. Ei essent utroque nec, ne pro cibo semper.
+                Sit at natum percipitur, omnes accumsan sed in. Qui ea modo vitae, eum ad nulla saepe copiosae, ut has
+                veritus consequat intellegam. Equidem maiestatis nec ad. Per in duis efficiendi, ius eu fugit
+                vituperatoribus. Aeque accumsan expetendis est ne, elitr expetendis efficiantur nam ut. His graece
+                causae cu.
+                Eos inani tollit ea, nisl oporteat intellegat et pro. Labore facete rationibus mei ex, quot iracundia
+                eum in, vis albucius deseruisse ei. In ius voluptua conceptam scripserit, qui atqui iracundia at, mea
+                utamur admodum at. Cu mucius iuvaret sit.
+                Qui ex inermis fuisset. Usu laboramus pertinacia id, tempor prompta adipisci id sed. Eam te phaedrum
+                tacimates, per ex inermis singulis consequat, mel possim aeterno scripta ad. Esse veri accusamus te
+                vix.
+                Mea eu persius habemus consulatu, ex mea suas assum pertinax. Brute liber maluisset sea no, ex causae
+                vituperata disputando usu, mel ad partiendo iracundia. Nisl doming necessitatibus no mel, sea at soluta
+                concludaturque. Zril delenit sit ne, id munere ocurreret adipiscing sea. Eum nibh eloquentiam ut.
+            </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.0586684133723!2d6.784365015681914!3d52.260479663182075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b80e02905554d3%3A0x2862a3d5ebd1ab56!2sROC+van+Twente+-+De+Gieterij!5e0!3m2!1sen!2snl!4v1547541685258"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe width="600" height="450" src="https://www.youtube.com/embed/otaqEA0fF9o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <br>
+            <h1 id="nav3title" class="text">nav3</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos debitis
+                graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei, delenit
+                voluptatum pro ei. Elaboraret omittantur no usu, quo doctus invidunt deserunt et, no ius debet labitur
+                delicata. At sit agam corpora moderatius, summo atomorum ne nec.
+                Sea an duis eruditi alienum. Eos debet conclusionemque ut, pro labitur blandit dissentias ei. Vel duis
+                quaestio gloriatur ut, vim ut nihil verterem moderatius. Ei essent utroque nec, ne pro cibo semper.
+                Sit at natum percipitur, omnes accumsan sed in. Qui ea modo vitae, eum ad nulla saepe copiosae, ut has
+                veritus consequat intellegam. Equidem maiestatis nec ad. Per in duis efficiendi, ius eu fugit
+                vituperatoribus. Aeque accumsan expetendis est ne, elitr expetendis efficiantur nam ut. His graece
+                causae cu.
+                Eos inani tollit ea, nisl oporteat intellegat et pro. Labore facete rationibus mei ex, quot iracundia
+                eum in, vis albucius deseruisse ei. In ius voluptua conceptam scripserit, qui atqui iracundia at, mea
+                utamur admodum at. Cu mucius iuvaret sit.
+                Qui ex inermis fuisset. Usu laboramus pertinacia id, tempor prompta adipisci id sed. Eam te phaedrum
+                tacimates, per ex inermis singulis consequat, mel possim aeterno scripta ad. Esse veri accusamus te
+                vix.
+                Mea eu persius habemus consulatu, ex mea suas assum pertinax. Brute liber maluisset sea no, ex causae
+                vituperata disputando usu, mel ad partiendo iracundia. Nisl doming necessitatibus no mel, sea at soluta
+                concludaturque. Zril delenit sit ne, id munere ocurreret adipiscing sea. Eum nibh eloquentiam ut.
+            </p>
+            <br>
+            <h1 id="nav4title" class="text">nav4</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos debitis
+                graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei, delenit
+                voluptatum pro ei. Elaboraret omittantur no usu, quo doctus invidunt deserunt et, no ius debet labitur
+                delicata. At sit agam corpora moderatius, summo atomorum ne nec.
+                Sea an duis eruditi alienum. Eos debet conclusionemque ut, pro labitur blandit dissentias ei. Vel duis
+                quaestio gloriatur ut, vim ut nihil verterem moderatius. Ei essent utroque nec, ne pro cibo semper.
+                Sit at natum percipitur, omnes accumsan sed in. Qui ea modo vitae, eum ad nulla saepe copiosae, ut has
+                veritus consequat intellegam. Equidem maiestatis nec ad. Per in duis efficiendi, ius eu fugit
+                vituperatoribus. Aeque accumsan expetendis est ne, elitr expetendis efficiantur nam ut. His graece
+                causae cu.
+                Eos inani tollit ea, nisl oporteat intellegat et pro. Labore facete rationibus mei ex, quot iracundia
+                eum in, vis albucius deseruisse ei. In ius voluptua conceptam scripserit, qui atqui iracundia at, mea
+                utamur admodum at. Cu mucius iuvaret sit.
+                Qui ex inermis fuisset. Usu laboramus pertinacia id, tempor prompta adipisci id sed. Eam te phaedrum
+                tacimates, per ex inermis singulis consequat, mel possim aeterno scripta ad. Esse veri accusamus te
+                vix.
+                Mea eu persius habemus consulatu, ex mea suas assum pertinax. Brute liber maluisset sea no, ex causae
+                vituperata disputando usu, mel ad partiendo iracundia. Nisl doming necessitatibus no mel, sea at soluta
+                concludaturque. Zril delenit sit ne, id munere ocurreret adipiscing sea. Eum nibh eloquentiam ut.
+            </p>
+            <h1 id="nav5title" class="text">nav5</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos debitis
+                graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei, delenit
+                voluptatum pro ei. Elaboraret omittantur no usu, quo doctus invidunt deserunt et, no ius debet labitur
+                delicata. At sit agam corpora moderatius, summo atomorum ne nec.
+                Sea an duis eruditi alienum. Eos debet conclusionemque ut, pro labitur blandit dissentias ei. Vel duis
+                quaestio gloriatur ut, vim ut nihil verterem moderatius. Ei essent utroque nec, ne pro cibo semper.
+                Sit at natum percipitur, omnes accumsan sed in. Qui ea modo vitae, eum ad nulla saepe copiosae, ut has
+                veritus consequat intellegam. Equidem maiestatis nec ad. Per in duis efficiendi, ius eu fugit
+                vituperatoribus. Aeque accumsan expetendis est ne, elitr expetendis efficiantur nam ut. His graece
+                causae cu.
+                Eos inani tollit ea, nisl oporteat intellegat et pro. Labore facete rationibus mei ex, quot iracundia
+                eum in, vis albucius deseruisse ei. In ius voluptua conceptam scripserit, qui atqui iracundia at, mea
+                utamur admodum at. Cu mucius iuvaret sit.
+                Qui ex inermis fuisset. Usu laboramus pertinacia id, tempor prompta adipisci id sed. Eam te phaedrum
+                tacimates, per ex inermis singulis consequat, mel possim aeterno scripta ad. Esse veri accusamus te
+                vix.
+                Mea eu persius habemus consulatu, ex mea suas assum pertinax. Brute liber maluisset sea no, ex causae
+                vituperata disputando usu, mel ad partiendo iracundia. Nisl doming necessitatibus no mel, sea at soluta
+                concludaturque. Zril delenit sit ne, id munere ocurreret adipiscing sea. Eum nibh eloquentiam ut.
+            </p>
+        </div>
+
+    </div>
+
+
+
+
+    <style>
+        .alltext {
+            position: absolute;
+            left: 50px;
+            top: calc(100px + 100%);
+            width: 40%;
+        }
+
+        .scroll {
+            position: absolute;
+            left: 30%;
+            bottom: 20px;
+            animation: mymove 1s infinite;
+        }
+
+        .scroll:hover {
+            animation: null
+        }
+
+        .scrollcolor {
+            color: aliceblue
+        }
+
+        .landing {
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            width: 40%;
+        }
+
+        .text {
+            color: aliceblue;
+            font-size: 20px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .nav1 {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            color: aliceblue;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .nav1:hover {
+            border-bottom: 2px solid aliceblue
+        }
+
+        .nav2 {
+            position: absolute;
+            left: 0px;
+            top: 40px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            color: aliceblue;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .nav2:hover {
+            border-bottom: 2px solid aliceblue
+        }
+
+        .nav3 {
+            position: absolute;
+            left: 0px;
+            top: 80px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            color: aliceblue;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .nav3:hover {
+            border-bottom: 2px solid aliceblue
+        }
+
+        .nav4 {
+            position: absolute;
+            left: 0px;
+            top: 120px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            color: aliceblue;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .nav4:hover {
+            border-bottom: 2px solid aliceblue
+        }
+
+        .nav5 {
+            position: absolute;
+            left: 0px;
+            top: 160px;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            color: aliceblue;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        .nav5:hover {
+            border-bottom: 2px solid aliceblue
+        }
+
+        .centerer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .nav {
+            position: absolute;
+            width: 100px;
+            height: 300px;
+            top: -150px;
+            left: -50px;
+
+        }
+
+        #particles-js {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #ctx {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 30%;
+            height: 100%;
+        }
+
+        .main {
+            position: absolute;
+            top: 0px;
+            left: 30%;
+            width: 70%;
+            height: 100%;
+        }
+
+        .box {
+            border: 2px solid aliceblue
+        }
+
+        @keyframes mymove {
+            from {
+                bottom: 40px;
+            }
+
+            to {
+                bottom: 20px;
+            }
+        }
+    </style>
+    <script>
+        function navclick(data) {
+            document.getElementById("nav1").classList.remove("box");
+            document.getElementById("nav2").classList.remove("box");
+            document.getElementById("nav3").classList.remove("box");
+            document.getElementById("nav4").classList.remove("box");
+            document.getElementById("nav5").classList.remove("box");
+            document.getElementById(data).classList.add("box");
+            if (data === 'nav1') {
+                window.scrollTo(0, 0);
+            }
+            if (data === 'nav2') {
+                window.scrollTo(0, window.innerHeight);
+            }
+            if (data === 'nav3') {
+                window.scrollTo(0, window.innerHeight + document.getElementById("nav3title").offsetTop);
+            }
+            if (data === 'nav4') {
+                window.scrollTo(0, window.innerHeight + document.getElementById("nav4title").offsetTop);
+            }
+            if (data === 'nav5') {
+                window.scrollTo(0, window.innerHeight + document.getElementById("nav5title").offsetTop);
+            }
+        }
+        setInterval(function () {
+
+
+            if (window.pageYOffset > document.getElementById("nav5title").offsetTop) {
+                var data = "nav5"
+                document.getElementById("nav1").classList.remove("box");
+                document.getElementById("nav2").classList.remove("box");
+                document.getElementById("nav3").classList.remove("box");
+                document.getElementById("nav4").classList.remove("box");
+                document.getElementById("nav5").classList.remove("box");
+                document.getElementById(data).classList.add("box");
+
+            } else if (window.pageYOffset > document.getElementById("nav4title").offsetTop) {
+                var data = "nav4"
+                document.getElementById("nav1").classList.remove("box");
+                document.getElementById("nav2").classList.remove("box");
+                document.getElementById("nav3").classList.remove("box");
+                document.getElementById("nav4").classList.remove("box");
+                document.getElementById("nav5").classList.remove("box");
+                document.getElementById(data).classList.add("box");
+
+            } else if (window.pageYOffset > document.getElementById("nav3title").offsetTop) {
+                var data = "nav3"
+                document.getElementById("nav1").classList.remove("box");
+                document.getElementById("nav2").classList.remove("box");
+                document.getElementById("nav3").classList.remove("box");
+                document.getElementById("nav4").classList.remove("box");
+                document.getElementById("nav5").classList.remove("box");
+                document.getElementById(data).classList.add("box");
+
+            } else if (window.pageYOffset > document.getElementById("nav2title").offsetTop) {
+                var data = "nav2"
+                document.getElementById("nav1").classList.remove("box");
+                document.getElementById("nav2").classList.remove("box");
+                document.getElementById("nav3").classList.remove("box");
+                document.getElementById("nav4").classList.remove("box");
+                document.getElementById("nav5").classList.remove("box");
+                document.getElementById(data).classList.add("box");
+
+            } else {
+                var data = "nav1"
+                document.getElementById("nav1").classList.remove("box");
+                document.getElementById("nav2").classList.remove("box");
+                document.getElementById("nav3").classList.remove("box");
+                document.getElementById("nav4").classList.remove("box");
+                document.getElementById("nav5").classList.remove("box");
+                document.getElementById(data).classList.add("box");
+
+            }
+
+
+
+        }, 1000)
+
+        function mainscroll() {
+
+
+            window.scrollTo(0, window.innerHeight);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //canvas
+        var scroll = 0
+        var lastscroll = window.pageYOffset
+        var list = []
+        var ctx = document.getElementById("ctx").getContext('2d');
+        setInterval(function () {
+            document.getElementById("ctx").width = window.innerWidth;
+            document.getElementById("ctx").height = window.innerHeight;
+            ctx.fillStyle = "#323738";
+
+            ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+            draw()
+                scroll = scroll - (scroll / 5 )
+                if (lastscroll > window.pageYOffset){
+                    scroll -= 5
+                } 
+                if (lastscroll < window.pageYOffset){
+                    scroll += 5
+                } 
+                lastscroll = window.pageYOffset
+        }, 50)
+
+
+
+        function draw() {
+
+            for (a = 0; a < list.length; a++) {
+
+
+                ctx.fillStyle = "#c6c9ce"
+
+                ctx.beginPath();
+                ctx.moveTo(list[a].x, list[a].y);
+                ctx.arc(list[a].x, list[a].y, list[a].s, 0, Math.PI * 2, true);
+                ctx.fill();
+                ctx.closePath();
+
+                list[a].x += list[a].mx
+                list[a].y += list[a].my - scroll
+
+
+                if (list[a].x > window.innerWidth) {
+                    list[a].x = 0
+                }
+                if (list[a].x < 0) {
+                    list[a].x = window.innerwidth
+                }
+
+                if (list[a].y > window.innerHeight) {
+                    list[a].y = 0
+                }
+                if (list[a].y < 0) {
+                    list[a].y = window.innerHeight
+                }
+
+            }
+
+        }
+
+
+        make(40)
+
+        function make(i) {
+            for (a = 0; a < i; a++) {
+                var dot = {
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                    mx: (Math.random() - 0.5) * 6,
+                    my: (Math.random() - 0.5) * 6,
+                    s: Math.random() * 5,
+                }
+
+                list.push(dot)
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
