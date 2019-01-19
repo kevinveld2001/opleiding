@@ -43,18 +43,20 @@
 
     <div class="main">
         <div class="landing">
-            <h1 id="nav1title" class="titletext">de opleiding die ik ga doen</h1>
+            <h1 id="nav1title" class="titletext">De opleiding die ik ga doen</h1>
             <p class="text">Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos
                 debitis graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei,
                 delenit voluptatum pro ei. Elaboraret omittantur no usu, quo doctus invidunt deserunt et, no ius debet
                 labitur delicata. At sit agam corpora moderatius, summo atomorum ne nec.</p>
         </div>
-        <div class="scroll">
-            <a href="javascript:mainscroll()">
-                <i class="fas fa-chevron-down scrollcolor "></i>
-            </a>
+        <a href="javascript:mainscroll()">
 
-        </div>
+            <div class="scroll">
+                <div class="scrollclick">
+                </div>
+                <i class="fas fa-chevron-down scrollcolor "></i>
+            </div>
+        </a>
         <div class="alltext">
             <h1 id="nav2title" class="titletext">nav2</h1>
             <p class="text">
@@ -432,6 +434,20 @@
             border: 2px solid aliceblue
         }
 
+        body {
+            background-color: #323738;
+
+        }
+
+        .scrollclick {
+            position: absolute;
+            left: -100px;
+            top: -100px;
+            width: 200px;
+            height: 200px;
+
+        }
+
         @keyframes mymove {
             from {
                 bottom: 40px;
@@ -443,27 +459,37 @@
         }
     </style>
     <script>
+        var scrolltopos = null
+
         function navclick(data) {
-            document.getElementById("nav1").classList.remove("box");
-            document.getElementById("nav2").classList.remove("box");
-            document.getElementById("nav3").classList.remove("box");
-            document.getElementById("nav4").classList.remove("box");
-            document.getElementById("nav5").classList.remove("box");
-            document.getElementById(data).classList.add("box");
-            if (data === 'nav1') {
-                window.scrollTo(0, 0);
-            }
-            if (data === 'nav2') {
-                window.scrollTo(0, window.innerHeight);
-            }
-            if (data === 'nav3') {
-                window.scrollTo(0, window.innerHeight + document.getElementById("nav3title").offsetTop);
-            }
-            if (data === 'nav4') {
-                window.scrollTo(0, window.innerHeight + document.getElementById("nav4title").offsetTop);
-            }
-            if (data === 'nav5') {
-                window.scrollTo(0, window.innerHeight + document.getElementById("nav5title").offsetTop);
+            scrolltopos = null
+            godown = false
+            goup = false
+             if (scrolltopos === null) {
+
+                if (data === 'nav1') {
+                    // window.scrollTo(0, 0);
+                    scrolltopos = 1
+                }
+                if (data === 'nav2') {
+                    // window.scrollTo(0, window.innerHeight);
+                    scrolltopos = window.innerHeight
+                }
+                if (data === 'nav3') {
+                    // window.scrollTo(0, window.innerHeight + document.getElementById("nav3title").offsetTop);
+                    scrolltopos = window.innerHeight + document.getElementById("nav3title").offsetTop
+                }
+                if (data === 'nav4') {
+                    // window.scrollTo(0, window.innerHeight + document.getElementById("nav4title").offsetTop);
+                    scrolltopos = window.innerHeight + document.getElementById("nav4title").offsetTop
+                }
+                if (data === 'nav5') {
+                    // window.scrollTo(0, window.innerHeight + document.getElementById("nav5title").offsetTop);
+                    scrolltopos = window.innerHeight + document.getElementById("nav5title").offsetTop
+                }
+
+
+
             }
         }
         setInterval(function () {
@@ -518,14 +544,68 @@
 
 
 
-        }, 1000)
+        }, 100)
 
         function mainscroll() {
 
 
-            window.scrollTo(0, window.innerHeight);
+            // window.scrollTo(0, window.innerHeight);
+            scrolltopos = window.innerHeight
         }
 
+
+
+
+        setInterval(superscroll, 1)
+        var godown = false
+        var goup = false
+
+        function superscroll() {
+            for (a= 0 ; a < 50 ; a++){
+            if (scrolltopos === null) {
+
+            } else {
+                if (goup) {
+                    if (scrolltopos > window.pageYOffset) {
+                        scrolltopos = null
+                        goup = false
+                    }
+
+                } else if (godown) {
+                    if (scrolltopos < window.pageYOffset) {
+                        scrolltopos = null
+                        godown = false
+                    }
+
+                }
+                 if(scrolltopos === Math.round(window.pageYOffset)){
+                    scrolltopos = null
+                    godown = false
+                    goup = false
+                }
+
+
+
+                if (scrolltopos > window.pageYOffset) {
+                    window.scrollBy(0, 1)
+                    console.log("down")
+                    godown = true
+                } else if (scrolltopos < window.pageYOffset) {
+                    window.scrollBy(0, -1)
+                    console.log("up")
+                    goup = true
+                }
+
+
+
+            }
+
+
+
+
+
+            }
+        }
 
 
         //canvas
