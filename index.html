@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4, maximum-scale=0.4, minimum-scale=0.4">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 
 
     <div class="main">
-        <div class="landing">
+        <div id="landing"class="landing">
             <h1 id="nav1title" class="titletext">De opleiding die ik ga doen</h1>
             <p class="text">Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos
                 debitis graecis. Sit suas ocurreret aliquando at, at ludus partem dolorum nam. Dolor tempor et mei,
@@ -57,7 +58,7 @@
                 <i class="fas fa-chevron-down scrollcolor "></i>
             </div>
         </a>
-        <div class="alltext">
+        <div id="maintext"class="alltext">
             <h1 id="nav2title" class="titletext">nav2</h1>
             <p class="text">
                 Lorem ipsum dolor sit amet, ei vis liber laboramus, pri ea modus appareat qualisque. Ad eos debitis
@@ -266,6 +267,12 @@
             top: calc(100px + 100%);
             width: 40%;
         }
+        .moballtext {
+            position: absolute;
+            left: 50px;
+            top: calc(100px + 100%);
+            width: 80%;
+        }
 
         .scroll {
             position: absolute;
@@ -286,7 +293,14 @@
             position: absolute;
             left: 50px;
             top: 100px;
-            width: 40%;
+            width: 0%;
+        }
+        
+        .moblanding {
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            width: 80%;
         }
 
         .text {
@@ -430,6 +444,7 @@
             height: 100%;
         }
 
+
         .box {
             border: 2px solid aliceblue
         }
@@ -541,6 +556,21 @@
                 document.getElementById(data).classList.add("box");
 
             }
+
+
+
+
+            if (window.innerHeight > window.innerWidth){
+                document.getElementById("maintext").classList.add("moballtext");
+                
+                document.getElementById("landing").classList.add("moblanding");
+            }else{
+                document.getElementById("landing").classList.remove("moblanding");
+            }
+
+
+
+
 
 
 
