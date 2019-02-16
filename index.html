@@ -214,7 +214,8 @@
     <br>
                     <a href="https://kevinveld2001.github.io/fireworks-particle/index.html"><button class="playerbtn">ga naar de website</button></a>
                     <a href="https://github.com/kevinveld2001/fireworks-particle"><button class="playerbtn">zie de code van de site</button></a>
-            </p>
+					<a href="javascript:sw()"><button class="playerbtn">bekijk via deze site</button></a> 
+ </p>
 
             <h1 id="csub4"class="text">mobile app</h1>
             <p>
@@ -508,7 +509,7 @@
         
 
 
-    
+    var bg = 1
 
 
 
@@ -730,9 +731,10 @@
         var list = []
         var ctx = document.getElementById("ctx").getContext('2d');
         setInterval(function () {
+		if (bg === 1){
             document.getElementById("ctx").width = window.innerWidth;
             document.getElementById("ctx").height = window.innerHeight;
-            ctx.fillStyle = "#323738";
+            ctx.fillStyle = "#1a1a1a";
 
             ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
             draw()
@@ -744,6 +746,7 @@
                 scroll += 5
             }
             lastscroll = window.pageYOffset
+			}
         }, 50)
 
 
@@ -753,7 +756,7 @@
             for (a = 0; a < list.length; a++) {
 
 
-                ctx.fillStyle = "#c6c9ce"
+                ctx.fillStyle = list[a].color
 
                 ctx.beginPath();
                 ctx.moveTo(list[a].x, list[a].y);
@@ -761,6 +764,8 @@
                 ctx.fill();
                 ctx.closePath();
 
+				
+				
                 list[a].x += list[a].mx
                 list[a].y += list[a].my - scroll
 
@@ -778,6 +783,19 @@
                 if (list[a].y < 0) {
                     list[a].y = window.innerHeight
                 }
+				/*
+				for (i = 0; a < list.length; i++) {
+				
+				ctx.beginPath();
+				ctx.lineWidth = "1";
+				ctx.strokeStyle = "white"
+				ctx.moveTo(list[a].x, list[a].y);
+				ctx.lineTo(list[i].x, list[i].y);
+				ctx.stroke();
+				ctx.closePath();
+				}
+				*/
+				
 
             }
 
@@ -788,18 +806,276 @@
 
         function make(i) {
             for (a = 0; a < i; a++) {
+			
+				var colorlist = ['#69AE9B','#698EAE','#69AE6F','#FABC50','#c6c9ce','#c6c9ce','#53FA50','#c6c9ce','#A050FA','#50F2FA']
+				
+			
                 var dot = {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
                     mx: (Math.random() - 0.5) * 6,
                     my: (Math.random() - 0.5) * 6,
-                    s: Math.random() * 5,
+                    s: Math.random() * 6,
+					color:colorlist[Math.round(Math.random()*10)],
                 }
 
                 list.push(dot)
             }
 
         }
+		
+		
+		
+		
+		
+		
+		
+		//fp
+		
+		
+		        var ctx = document.getElementById("ctx").getContext("2d");
+        ctx.font = '30px Arial'
+        var screenw
+        var screenh 
+
+        //end main
+
+        // clear sreen
+
+        setInterval(clearscreen, 10)
+
+        function clearscreen() {
+		if (bg === 2){
+            ctx.canvas.width = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+            var screenw = window.innerWidth
+            var screenh = window.innerHeight
+            ctx.clearRect(0, 0, screenw, screenh);
+            ctx.fillStyle = "#1a1a1a"
+            ctx.fillRect(0, 0, screenw, screenh)
+            move()
+			}
+        }
+        //end clear sreen
+        var muisx
+        var muisy
+        document.onmousemove = function (mouse) {
+            muisx = mouse.clientX;
+            muisy = mouse.clientY;
+        }
+        var isdown = false
+
+        function up() {
+            isdown = false
+        }
+
+        function down() {
+            isdown = true
+        }
+
+        setInterval(click, 70)
+
+        function click() {
+            if (isdown) {
+                newbal(muisx, muisy)
+                console.log('mk bal')
+            }
+        }
+
+        function move() {
+            for (var a = 0; a < balllist.length; a++) {
+                if (balllist[a] == undefined) {
+                    if (a == 0) {
+                        balllist.shift()
+                    }
+                } else {
+                    var bal = balllist[a]
+                   // console.log(bal)
+                    bal.x += bal.movex
+                    bal.y += bal.movey + 0.1
+                        //gravity
+                         bal.movey +=0.03
+                    
+                    bal.s -= 0.1
+                    balllist[a] = bal
+                    if (bal.s < 0.2) {
+                        delete balllist[a]
+                    }
+                    drawbal(bal.x, bal.y, bal.s,bal.color)
+                    if (bal.knetter){
+                        
+                        var num1 = Math.random() * 40
+                        var num2 = num1 - 20
+                        var num3 = Math.random() * 40
+                        var num4 = num3 - 20
+                        drawbal(bal.x + num2, bal.y + num4, 2,"#ffffff")
+                    }
+                }
+            }
+        }
+
+
+
+
+        function drawbal(x, y, s,color) {
+
+            ctx.fillStyle = color
+
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.arc(x, y, s ,0, Math.PI * 2,true);
+            ctx.fill();
+            ctx.closePath();
+
+        }
+
+auto()
+function auto(){
+setInterval (doauto,200)
+
+}
+
+function doauto(){
+if(bg === 2){
+    var x = Math.random() * window.innerWidth
+    var y = Math.random() * window.innerHeight
+    //console.log ("x = "+ x)
+   // console.log ("y = "+ y)
+    newbal(x,y)
+}
+}
+		
+		
+	var balllist = []
+var colorlist = ['#ff0000','#1CAFFE','#F6FA67','#1FFF00','#1FFF00','#002EFF','#FF7C00','#00FFAA','#FF0000','#FF8700']
+function newbal(x, y, ) {
+    
+    
+    var thiscolor = colorlist[Math.round(Math.random() * 10)]
+ var nutraal = "#ffffff"
+
+ var knetter = false
+ if (Math.random() * 10 > 6){
+     knetter = true
+ }
+
+ var size = 10 + Math.random() /6
+    if (Math.round(Math.random() * 10) > 8){
+        nutraal = thiscolor
+    }else if (Math.round(Math.random() * 10) > 4){
+        nutraal = colorlist[Math.round(Math.random() * 10)]
+    }else{
+        nutraal = "#ffffff"
+    }
+
+
+    var bal1 = {
+        x: x,
+        y: y,
+        s: size,
+        movex: 1,
+        movey: 0,
+        color:nutraal,
+        knetter:knetter
+    }
+    var bal2 = {
+        x: x,
+        y: y,
+        s: size,
+        movex: 0,
+        movey: 1,
+        color:nutraal,
+        knetter:knetter
+    }
+    var bal3 = {
+        x: x,
+        y: y,
+        s: size,
+        movex: -1,
+        movey: 0,
+        color:nutraal,
+        knetter:knetter
+    }
+    var bal4 = {
+        x: x,
+        y: y,
+        s: size,
+        movex: 0,
+        movey: -1,
+        color:nutraal,
+        knetter:knetter
+    }
+
+var size2 = size -= 3  - Math.random() /5
+
+    var bal5 = {
+        x: x,
+        y: y,
+        s:size2,
+        movex: -0.7,
+        movey: -0.7,
+        color:thiscolor,
+        knetter:knetter
+    }
+    var bal6 = {
+        x: x,
+        y: y,
+        s: size2,
+        movex: 0.7,
+        movey: -0.7,
+        color:thiscolor,
+        knetter:knetter
+    }
+    var bal7 = {
+        x: x,
+        y: y,
+        s: size2,
+        movex: 0.7,
+        movey: 0.7,
+        color:thiscolor,
+        knetter:knetter
+    }
+    var bal8 = {
+        x: x,
+        y: y,
+        s: size2,
+        movex: -0.7,
+        movey: 0.7,
+        color:thiscolor,
+        knetter:knetter
+    }
+
+    balllist.push(bal1)
+    balllist.push(bal2)
+    balllist.push(bal3)
+    balllist.push(bal4)
+    balllist.push(bal5)
+    balllist.push(bal6)
+    balllist.push(bal7)
+    balllist.push(bal8)
+}	
+		
+		
+		
+		
+		
+		//switcher
+		
+		
+		function sw () {
+		if (bg === 1){
+		bg = 2
+		}else{
+		bg = 1
+		}
+		
+		}
+		
+		
+		
+		
+		
+		
     </script>
 
 </body>
